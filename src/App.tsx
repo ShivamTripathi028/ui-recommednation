@@ -3,8 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import RecommendationForm from "./pages/RecommendationForm";
 import RecommendationResults from "./pages/RecommendationResults";
@@ -18,8 +17,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/recommendation-form" element={<RecommendationForm />} />
+          <Route path="/" element={<RecommendationForm />} />
+          <Route path="/recommendation-form" element={<Navigate to="/" replace />} />
           <Route path="/recommendation-results" element={<RecommendationResults />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

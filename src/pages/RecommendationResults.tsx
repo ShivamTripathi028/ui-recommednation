@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -61,7 +61,8 @@ const RecommendationResults = () => {
     
     toast.success(`Selected products: ${selectedProductNames}`);
     // In a real app, this would navigate to the store with the selected products
-    window.location.href = "/store";
+    // For now, just go back to the form
+    navigate("/");
   };
 
   return (
@@ -102,9 +103,9 @@ const RecommendationResults = () => {
                 <h3 className="text-xl font-semibold text-rak-blue mb-2">{product.name}</h3>
                 <p className="text-gray-600 mb-4 text-sm">{product.description}</p>
                 <div className="flex flex-col space-y-3 mt-auto">
-                  <Link to={product.documentationLink} className="text-rak-blue hover:underline text-sm">
+                  <a href={product.documentationLink} className="text-rak-blue hover:underline text-sm">
                     Documentation <ChevronRight className="inline h-3 w-3" />
-                  </Link>
+                  </a>
                   <div className="flex items-center space-x-2">
                     <Checkbox 
                       id={`product-${product.id}`} 
@@ -122,7 +123,7 @@ const RecommendationResults = () => {
           
           <div className="flex justify-center mt-10">
             <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
-              <Button variant="outline" className="flex-1" onClick={() => navigate("/recommendation-form")}>
+              <Button variant="outline" className="flex-1" onClick={() => navigate("/")}>
                 Back to Form
               </Button>
               <Button 

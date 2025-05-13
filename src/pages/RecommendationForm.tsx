@@ -118,14 +118,7 @@ const RecommendationForm = () => {
                   />
                 </div>
                 
-                <div className="flex justify-between pt-4">
-                  <Button 
-                    type="button" 
-                    variant="outline"
-                    onClick={() => navigate("/")}
-                  >
-                    Back to Home
-                  </Button>
+                <div className="flex justify-end pt-4">
                   <Button 
                     type="submit"
                     className="bg-rak-blue hover:bg-rak-light-blue"
