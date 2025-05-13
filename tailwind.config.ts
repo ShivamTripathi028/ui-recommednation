@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				rak: {
+					blue: '#1E5BFF',
+					'light-blue': '#4285f4',
+					'lighter-blue': '#75a4ff',
 				}
 			},
 			borderRadius: {
@@ -89,6 +95,9 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			backgroundImage: {
+				'blue-gradient': 'linear-gradient(to bottom, #1E5BFF, #4285f4)'
 			}
 		}
 	},
