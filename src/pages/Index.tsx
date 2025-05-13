@@ -34,41 +34,68 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Technical Support Card */}
-            <Card className="p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-semibold text-rak-blue mb-3">Technical Support</h3>
-              <p className="text-gray-600 mb-6">
-                Get help with device setup, configuration, firmware issues, troubleshooting, and more.
-              </p>
-              <Button variant="outline" className="w-full justify-between">
-                Request Technical Support
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+            <Card className="p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col">
+              <div className="mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
+                  alt="Technical Support" 
+                  className="w-full h-40 object-cover rounded-md mb-4"
+                />
+                <h3 className="text-xl font-semibold text-rak-blue mb-3">Technical Support</h3>
+                <p className="text-gray-600 mb-6">
+                  Get help with device setup, configuration, firmware issues, troubleshooting, and more.
+                </p>
+              </div>
+              <div className="mt-auto">
+                <Button variant="outline" className="w-full justify-between">
+                  Request Technical Support
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
             </Card>
 
             {/* Sales Inquiry Card */}
-            <Card className="p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-semibold text-rak-blue mb-3">Sales Inquiry</h3>
-              <p className="text-gray-600 mb-6">
-                Need guidance choosing the right product? Fill out our form detailing your use case, region, and application field.
-              </p>
-              <Button variant="outline" className="w-full justify-between">
-                Submit Inquiry
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+            <Card className="p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col">
+              <div className="mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
+                  alt="Sales Inquiry" 
+                  className="w-full h-40 object-cover rounded-md mb-4"
+                />
+                <h3 className="text-xl font-semibold text-rak-blue mb-3">Sales Inquiry</h3>
+                <p className="text-gray-600 mb-6">
+                  Need guidance choosing the right product? Fill out our form detailing your use case, region, and application field.
+                </p>
+              </div>
+              <div className="mt-auto">
+                <Button variant="outline" className="w-full justify-between">
+                  Submit Inquiry
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
             </Card>
 
             {/* Product Recommendation Card */}
-            <Card className="p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-semibold text-rak-blue mb-3">Product Recommendation</h3>
-              <p className="text-gray-600 mb-6">
-                Get personalized IoT product recommendations based on your use case.
-              </p>
-              <Button asChild className="w-full justify-between bg-rak-blue hover:bg-rak-light-blue">
-                <Link to="/recommendation-form">
-                  Get Recommendations
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+            <Card className="p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col">
+              <div className="mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
+                  alt="Product Recommendation" 
+                  className="w-full h-40 object-cover rounded-md mb-4"
+                />
+                <h3 className="text-xl font-semibold text-rak-blue mb-3">Product Recommendation</h3>
+                <p className="text-gray-600 mb-6">
+                  Get personalized IoT product recommendations based on your use case.
+                </p>
+              </div>
+              <div className="mt-auto">
+                <Button asChild className="w-full justify-between bg-rak-blue hover:bg-rak-light-blue">
+                  <Link to="/recommendation-form">
+                    Get Recommendations
+                    <ChevronRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </Card>
           </div>
         </div>
